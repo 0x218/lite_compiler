@@ -22,6 +22,7 @@ struct Token {
     std::optional<std::string> value{};
 };
 
+//build tokens
 std::vector<Token> tokenize(std::string& input) {
     std::vector<Token> tokens;
     std::string buffer;
@@ -69,12 +70,14 @@ std::vector<Token> tokenize(std::string& input) {
     return tokens;
 }
 
+
+//convert token to assembly
 std::string tokens_to_asm(const std::vector<Token>& inputToken) {
     std::stringstream output;
-    output << "global _start\nstart:\n";
+    output << "global _start\n_start:\n";
     for (int i = 0; i < inputToken.size(); i++) {
         const Token& token = inputToken.at(i);
-        //if it is 'return' check whether there are atlest two more tokens and that ar integer and semicolon.
+        //if it is 'return' check whether there are at-least two more tokens and that ar integer and semicolon.
         if (token.type == TokenType::_return) {
             if (i+1 < inputToken.size() &&
                 inputToken.at(i+1).type == TokenType::int_literal) {
@@ -106,6 +109,10 @@ int main(int argc, char* argv[]){
 
     //std::cout << content << std::endl;
     std::vector<Token> tokens = tokenize(content);
-    std::cout << tokens_to_asm(tokens) << std::endl;
+    //std::cout << tokens_to_asm(tokens) << std::endl;
+
+    //create assembly file
+    std::fstream outFile ("../out.asm", std::ios::out);
+    outFile <<tokens_to_asm(tokens) ;
     return 0;
 }
