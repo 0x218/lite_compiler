@@ -1,5 +1,8 @@
 assemble helloworld.asm (create an object file): 
     nasm -felf64 helloworld.asm
 
-    Link the object file: ld helloworld.o -o helloworld
-    run the executable: ./helloworld
+Link the object file:
+    ld helloworld.o -o helloworld
+
+run the executable:
+    ./helloworld

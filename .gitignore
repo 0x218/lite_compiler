@@ -1,3 +1,14 @@
+# CMake / build artifacts
+build/
+CMakeFiles/
+cmake-build-*/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# JetBrains IDE
+.idea/
+
 # Prerequisites
 *.d
 
