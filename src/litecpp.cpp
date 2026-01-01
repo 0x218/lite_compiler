@@ -112,7 +112,10 @@ int main(int argc, char* argv[]){
     //std::cout << tokens_to_asm(tokens) << std::endl;
 
     //create assembly file
-    std::fstream outFile ("../out.asm", std::ios::out);
+    std::fstream outFile ("out.asm", std::ios::out);
     outFile <<tokens_to_asm(tokens) ;
+
+    system("nasm -felf64 out.asm");
+    system("ld -o out out.o");
     return 0;
 }

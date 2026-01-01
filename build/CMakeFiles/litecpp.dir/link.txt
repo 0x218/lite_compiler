@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/litecpp.dir/link.d CMakeFiles/litecpp.dir/src/main.cpp.o -o litecpp
