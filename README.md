@@ -1,6 +1,9 @@
 # lite_compiler (a C++ Compiler)
 
 lite_compiler is a light weight programming language, written in C++.
+1. It is a semicolon ending lanugage.
+2. Program extension is .lcp (lite c plus).
+
 
 ## Pre-requisites
 

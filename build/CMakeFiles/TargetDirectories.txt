@@ -1,0 +1,3 @@
+/home/rsa/MyStuff/Work/lite_compiler/build/CMakeFiles/litecpp.dir
+/home/rsa/MyStuff/Work/lite_compiler/build/CMakeFiles/edit_cache.dir
+/home/rsa/MyStuff/Work/lite_compiler/build/CMakeFiles/rebuild_cache.dir
